@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+	<title>[Demo] Customer Order Report</title>
+
+	<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="initial-scale=1.0"/>
+
+	<link rel="stylesheet" href="css/libs/oj/v2.1.0/alta/oj-alta-min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <span role="img" class="oracle-logo" title="Oracle Logo" alt="Oracle Logo"></span>
+
+    <header>
+        Customer Order Report
+
+        <i class="show-chart icon-pie-chart"></i>
+    </header>
+
+    <main>
+        <nav>
+            <!-- ko foreach: customers -->
+            <a href="#" data-bind="click: $parent.onSelectCustomer"><i class="icon-user-tie"></i><span data-bind="text: name"></span></a>
+            <!-- /ko -->
+        </nav>
+
+        <section data-bind="with: customer">
+            <label class="oj-label">Customer</label>
+            <p class="customer" data-bind="text: name"></p>
+
+            <label class="oj-label">Orders</label>
+            <p class="orders" data-bind="text: orders"></p>
+
+            <label class="oj-label">Total</label>
+            <p class="orders" data-bind="text: total"></p>
+        </section>
+    </main>
+
+
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
+</body>
+</html>

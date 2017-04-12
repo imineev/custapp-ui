@@ -1,0 +1,27 @@
+version: '2'
+services:
+  custapp-ui-1.0:
+    image: "cbras/custapp-ui:1.0"
+    ports:
+      - "9200:9100/tcp"
+    environment:
+      - OCCS_PHASE_ID=1
+      - "occs:description=Node.js  v 6.8.0"
+      - HOST_IP=${HOST_IP}
+  custapp-db-1.0:
+    image: "cbras/oracle-ee12102:1.0"
+    environment:
+      - ORACLE_SID=ORCLCDB
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_TESTDATA=load3.sql
+      - ORACLE_TESTDATA_OUT=load3_out.txt
+      - "occs:description=Oracle EE 12102 with CustApp:1.0 Test Data"
+      - OCCS_PHASE_ID=0
+    ports:
+      - "1521:1521/tcp"
+      - "5500:5500/tcp"
+    volumes:
+      - logslave:/logslave
+    command: "/logslave/myRunOracle.sh"
+volumes:
+  logslave:

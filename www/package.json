@@ -1,0 +1,18 @@
+{
+  "name": "jet-master-detail-example",
+  "version": "0.0.3",
+  "description": "a simple master-detail example using JET",
+  "author": "Mike MacMillan <mike.macmillan@oracle.com>",
+  "dependencies": {
+    "express": "3.x.x",
+    "connect": "2.x.x",
+    "body-parser": "1.x.x",
+    "qs": "1.x.x",
+    "mocha": "3.x.x",
+    "q": "1.x.x",
+    "oracledb": "1.x.x"
+ },
+  "scripts": {
+      "test": "mocha -R xunit test> test-reports.xml"
+ }
+}
