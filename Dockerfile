@@ -1,4 +1,4 @@
-FROM cbras/ol67-nodejs:1.0
+FROM imineev/ol67-nodejs:1.0
 
 RUN mkdir -p /usr/src/app/www
 COPY ./www/ /usr/src/app/www
