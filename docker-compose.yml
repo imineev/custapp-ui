@@ -1,7 +1,7 @@
 version: '2'
 services:
   custapp-ui-1.0:
-    image: "cbras/custapp-ui:1.0"
+    image: "imineev/custapp-ui:1.0"
     ports:
       - "9200:9100/tcp"
     environment:
