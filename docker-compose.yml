@@ -9,7 +9,7 @@ services:
       - "occs:description=Node.js  v 6.8.0"
       - HOST_IP=${HOST_IP}
   custapp-db-1.0:
-    image: "cbras/oracle-ee12102:1.0"
+    image: "imineev/oracle-ee12102:1.0"
     environment:
       - ORACLE_SID=ORCLCDB
       - ORACLE_PDB=ORCLPDB1
